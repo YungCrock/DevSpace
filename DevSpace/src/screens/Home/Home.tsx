@@ -5,6 +5,7 @@ import { Logo } from "../../components/Logo/Logo";
 import { MainButton } from "../../components/Button/MainButton";
 
 import { styles } from './HomeStyles';
+import { Footer } from "../../components/Footer/Footer";
 
 export function Home() {
     return(
@@ -32,6 +33,10 @@ export function Home() {
 
             <View>
                 <MainButton/>
+            </View>
+
+            <View>
+                <Footer/>
             </View>
             
         </View>
