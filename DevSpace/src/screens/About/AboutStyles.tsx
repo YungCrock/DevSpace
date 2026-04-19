@@ -5,13 +5,17 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#0F172A',
         alignItems: 'center',
-        justifyContent: 'center',
-        borderWidth: 3,
+        justifyContent: 'flex-start',
     },
-    logoContainer: {
-        borderWidth: 3,
-        paddingHorizontal: 12,
-       paddingVertical: 30
+    titleContainer:{
+        width: '90%',
+        paddingBottom: 30
+    },
+    footerContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        width: '100%',
+        alignItems: 'center',
     },
     mainTitle: {
         fontSize: 30,

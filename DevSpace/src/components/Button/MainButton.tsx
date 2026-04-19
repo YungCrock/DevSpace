@@ -8,7 +8,7 @@ export function MainButton() {
             <Pressable
                 style={({ pressed }) => [styles.button, pressed && styles.pressedStyle, pressed && { transform: [{ scale: 0.97}] } ]}
             >
-                <Text>
+                <Text style={styles.text}>
                     Sobre mim
                 </Text>
             </Pressable>
@@ -16,7 +16,7 @@ export function MainButton() {
             <Pressable
                 style={({ pressed }) => [styles.button, pressed && styles.pressedStyle, pressed && { transform: [{ scale: 0.97}] } ]}
             >
-                <Text>
+                <Text style={styles.text}>
                     Entre em contato!
                 </Text>
             </Pressable>

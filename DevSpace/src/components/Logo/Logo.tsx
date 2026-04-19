@@ -1,12 +1,14 @@
 import React from "react"
-import { View, Image } from "react-native";
-import logo from "../../../assets/devspacelogo.png"
+import { View, Image, Text } from "react-native";
+import devLogo from "../../../assets/devspacelogo.png"
+import { styles } from "./LogoStyles";
 
 export function Logo() {
     return(
         <View>
             <Image
-                source={logo}
+                source={devLogo}
+                style={styles.logo}
             />
         </View>
     )

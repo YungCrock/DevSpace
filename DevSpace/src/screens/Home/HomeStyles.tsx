@@ -5,13 +5,17 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#0F172A',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         borderWidth: 3,
     },
-    logoContainer: {
-        borderWidth: 3,
-        paddingHorizontal: 12,
-       paddingVertical: 30
+    footerContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        width: '100%',
+        alignItems: 'center',
+    },
+    subContainer: {
+        marginBottom: 30
     },
     mainTitle: {
         fontSize: 30,
@@ -26,5 +30,5 @@ export const styles = StyleSheet.create({
     text: {
         fontSize: 15,
         color: '#F1F5F9'
-    }
+    },
 })

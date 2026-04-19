@@ -2,18 +2,19 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     button: {
-        width: '80%',
+        width: 130,
         borderRadius: 5,
         marginBottom: 25,
-        paddingVertical: 8,
+        paddingVertical: 12,
+        alignItems: 'center',
         backgroundColor: '#4F46E5',
     },
     pressedStyle: {
-        backgroundColor: '#3027e6',
+        backgroundColor: '#3931d8',
         color: '#F1F5F9',
     },
-    texto: {
-        fontSize: 18,
+    text: {
+        fontSize: 15,
         textAlign: 'center',
         color: '#F1F5F9'
     },

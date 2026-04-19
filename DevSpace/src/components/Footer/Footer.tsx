@@ -7,7 +7,7 @@ export function Footer() {
     return(
         <View style={styles.container}>
             <Text style={styles.text}>
-                Desenvolvido por Enzo Lucas
+                Desenvolvido por Enzo e Lucas
             </Text>
         </View>
     )
