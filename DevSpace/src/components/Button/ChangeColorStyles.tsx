@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: 25,
     marginTop: 20,
+    marginBottom: 20,
     elevation: 5, 
     shadowColor: '#06B6D4', 
     shadowOpacity: 0.5,

@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView  } from "react-native";
+import { View, Text, ScrollView } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import { Logo } from "../../components/Logo/Logo";
 import { MainButton } from "../../components/Button/MainButton";
 import { styles } from "./HomeStyles";
 import { Footer } from "../../components/Footer/Footer";
 import { ChangeColor } from "../../components/Button/ChangeColor";
 
-
 export function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const themeContainer = isDarkMode ? styles.bgDark : styles.bgLight;
+
+  const navigation = useNavigation<any>();
 
   const themeText = isDarkMode
     ? styles.mainTitleColorDark
@@ -55,7 +58,10 @@ export function Home() {
       </View>
 
       <View>
-        <MainButton />
+        <MainButton 
+          title="Sobre nós"
+          onPress={() => navigation.navigate("About")}
+        />
       </View>
 
       <View style={styles.footerContainer}>

@@ -1,33 +1,25 @@
 import { Pressable, Text, View } from "react-native";
-import { useNavigation } from '@react-navigation/native'; 
 import { styles } from "./MainButtonStyles";
 
-export function MainButton() {
-    const navigation = useNavigation<any>(); 
+type MainButtonProps = {
+  title?: string;
+  onPress?: () => void;
+};
 
-    return(
-        <View>
-            <Pressable
-                onPress={() => navigation.navigate('About')} 
-                style={({ pressed }) => [
-                    styles.button, 
-                    pressed && styles.pressedStyle, 
-                    pressed && { transform: [{ scale: 0.97}] } 
-                ]}
-            >
-                <Text style={styles.text}>Sobre mim</Text>
-            </Pressable>
+export function MainButton({ title, onPress }: MainButtonProps) {
 
-            <Pressable
-                onPress={() => navigation.navigate('Contato')}
-                style={({ pressed }) => [
-                    styles.button, 
-                    pressed && styles.pressedStyle, 
-                    pressed && { transform: [{ scale: 0.97}] } 
-                ]}
-            >
-                <Text style={styles.text}>Entre em contato!</Text>
-            </Pressable>
-        </View>
-    )
+  return (
+    <View>
+      <Pressable
+        onPress={onPress}
+        style={({ pressed }) => [
+          styles.button,
+          pressed && styles.pressedStyle,
+          pressed && { transform: [{ scale: 0.97 }] },
+        ]}
+      >
+        {title && <Text style={styles.text}>{title}</Text>}
+      </Pressable>
+    </View>
+  );
 }

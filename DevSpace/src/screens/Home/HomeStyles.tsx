@@ -21,23 +21,19 @@ export const styles = StyleSheet.create({
     },
     
     text: {
+        fontFamily: 'Inter-Regular',
         fontSize: 15,
         textAlign: 'center',
         margin: 16,
-        letterSpacing: 3,
-       
     },
     container: {
         backgroundColor: '#0F172A',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        borderWidth: 3,
     },
     footerContainer: {
-        flex: 1,
-        flexDirection: 'row',
         width: '100%',
-        alignItems: 'center',
+        alignItems: 'flex-start',
     },
     subContainer: {
         marginBottom: 30

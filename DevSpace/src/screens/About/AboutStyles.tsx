@@ -1,8 +1,18 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+    bgDark: { backgroundColor: '#0F172A' },
+    bgLight: { backgroundColor: '#F1F5F9' },
+
+    mainTitleColorDark: { color: '#F1F5F9' },
+    mainTitleColorLight: { color: '#0F172A' },
+    secondaryTitle: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        color: '#06B6D4' 
+    },
     container: {
-        flex: 1,
         backgroundColor: '#0F172A',
         alignItems: 'center',
         justifyContent: 'flex-start',
@@ -12,10 +22,8 @@ export const styles = StyleSheet.create({
         paddingBottom: 30
     },
     footerContainer: {
-        flex: 1,
-        flexDirection: 'row',
         width: '100%',
-        alignItems: 'center',
+        alignItems: 'flex-start',
     },
     mainTitle: {
         fontSize: 30,
@@ -23,7 +31,9 @@ export const styles = StyleSheet.create({
         color: '#F1F5F9'
     },
     text: {
+        fontFamily: 'Inter-Regular',
         fontSize: 15,
-        color: '#F1F5F9'
+        textAlign: 'left',
+        margin: 10
     }
 })
