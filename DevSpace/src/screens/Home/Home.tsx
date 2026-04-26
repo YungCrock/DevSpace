@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, Linking } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { Logo } from "../../components/Logo/Logo";
@@ -14,13 +14,24 @@ export function Home() {
 
   const navigation = useNavigation<any>();
 
+  const url = "https://linktr.ee/DevSpace";
+
+  const handlePress = async () => {
+    const supported = await Linking.canOpenURL(url);
+    if (supported) {
+      await Linking.openURL(url);
+    } else {
+      console.log("Não foi possível abrir o link: " + url);
+    }
+  }
+
   const themeText = isDarkMode
     ? styles.mainTitleColorDark
     : styles.mainTitleColorLight;
 
   return (
-    <ScrollView 
-      style={[themeContainer, { flex: 1 }]} 
+    <ScrollView
+      style={[themeContainer, { flex: 1 }]}
       contentContainerStyle={[styles.container, themeContainer]}
     >
       <View>
@@ -58,10 +69,12 @@ export function Home() {
       </View>
 
       <View>
-        <MainButton 
+        <MainButton
           title="Sobre nós"
           onPress={() => navigation.navigate("About")}
         />
+
+        <MainButton title="Nossos Links" onPress={handlePress} />
       </View>
 
       <View style={styles.footerContainer}>
