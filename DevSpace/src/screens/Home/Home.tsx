@@ -74,7 +74,10 @@ export function Home() {
           onPress={() => navigation.navigate("About")}
         />
 
-        <MainButton title="Nossos Links" onPress={handlePress} />
+        <MainButton 
+          title="Nossos Links" 
+          onPress={handlePress} 
+        />
       </View>
 
       <View style={styles.footerContainer}>
